@@ -16,4 +16,19 @@ public class PopupsViewer
 	{
 		JOptionPane.showMessageDialog(null, message);
 	}
+	
+	/**
+	 * Creates an input poput to collect a response from the user as a String.
+	 * @param question The question being asked to the user.
+	 * @return The user's response.
+	 */
+	
+	public String collectResponse(String question)
+	{
+		String response = "";
+		
+		response = JOptionPane.showInputDialog(null, question);
+		
+		return response;
+	}
 }
