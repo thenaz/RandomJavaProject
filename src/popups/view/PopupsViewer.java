@@ -31,4 +31,20 @@ public class PopupsViewer
 		
 		return response;
 	}
+	
+	
+	/**
+	 * Creates a popup to ask a yes/no/cancel type question.
+	 * @param question The question being asked the user.
+	 * @return The constant value from JOptionPane for y/n/c.
+	 */
+	
+	public int collectUserOption(String question)
+	{
+		int response = 0;
+		
+		response = JOptionPane.showOptionDialog(null, question);
+		
+		return response;
+	}
 }
