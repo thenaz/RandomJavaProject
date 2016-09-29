@@ -1,11 +1,15 @@
 package popups.controller;
 
 import popups.view.PopupsViewer;
+import popups.model.Thingy;
+import java.util.List;
+import java.util.ArrayList;
 
 public class PopupsController
 {
 	
 	private PopupsViewer display;
+	private List<Thingy> thingyList;
 	
 	public PopupsController()
 	{
@@ -15,13 +19,13 @@ public class PopupsController
 	public void start()
 	{
 		String answer = "sample";
-		while(answer != null && !answer.equals(""));
+		while(answer != null && ! isDouble(answer));
 	}
 	
 	{
 		display.displayMessage("Hi there :D");
 		String answer = display.collectResponse("What is going on?");
-		display.displayMessage(answer + "is what you said.");
+		display.displayMessage(answer + "You need to type in a number!!!!!");
 	}
 
 	
@@ -46,4 +50,36 @@ public class PopupsController
 	
 	return isParseable;
 	}
+	
+	private boolean isInteger(String potentialNumber)
+	{
+		boolean isParseable = false;
+		
+		try
+		{
+			int test = Integer.parseInt(potentialNumber);
+			isParseable = true;
+		}
+		catch(NumberFormatException notInt)
+		{
+			display.displayMessage(notInt.getMessage());
+			display.displayMessage("Type in an integer next time!");
+		}
+		
+		return isParseable;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
