@@ -69,17 +69,3 @@ public class PopupsController
 		return isParseable;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
