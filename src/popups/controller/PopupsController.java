@@ -68,4 +68,19 @@ public class PopupsController
 		
 		return isParseable;
 	}
+	
+	private void learnLists()
+	{
+		display.displayMessage(opupsthingyList.size() + " is the size of the list.");
+		popupsThingy testThingy = new popupsThingy();
+		popupsthingyList.add(testThingy);
+		display.displayMessage(popupsthingyList.size() + " is the size of the list.");
+		
+		for (int index = 0; index < 5; index++)
+			
+		{
+			Thingy addThingy = new Thingy();
+			thingyList.add(addThingy);
+		}
+	}
 }
